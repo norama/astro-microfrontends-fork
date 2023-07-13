@@ -1,4 +1,4 @@
-import { CounterMF1, CounterMF2 } from 'http://localhost:7300/bundle.js'
+import { CounterMF1, CounterMF2 } from 'solid-microfrontends'
 
 /*
 import { lazily } from 'solidjs-lazily'
