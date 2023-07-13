@@ -1,10 +1,16 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from 'react'
+import './App.css'
 
-const App = () => (
-  <section className="app-b">
-    <h1>App b</h1>
-  </section>
-);
+const App = () => {
+  const [count, setCount] = useState(0)
 
-export default App;
+  return (
+    <section className="app-b">
+      <h1 onClick={() => setCount((c) => c + 1)} style={{ cursor: 'pointer' }}>
+        ReactApp B Count: {count}
+      </h1>
+    </section>
+  )
+}
+
+export default App

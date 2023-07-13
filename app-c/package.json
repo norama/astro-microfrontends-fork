@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
+    "start": "vite --port 7003",
+    "dev": "vite --port 7003",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview --port 7003"
   },
   "license": "MIT",
   "devDependencies": {
     "vite": "^4.1.1",
     "vite-plugin-css-injected-by-js": "3.0.1",
-    "vite-plugin-solid": "^2.5.0"
+    "vite-plugin-solid": "^2.5.0",
+    "prettier": "^3.0.0"
   },
   "dependencies": {
     "solid-js": "^1.6.10"

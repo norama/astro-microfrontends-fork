@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
-import { resolve } from "path";
-import cssInject from "vite-plugin-css-injected-by-js";
+import { defineConfig } from 'vite'
+import solidPlugin from 'vite-plugin-solid'
+import { resolve } from 'path'
+import cssInject from 'vite-plugin-css-injected-by-js'
 
 export default defineConfig({
   plugins: [solidPlugin(), cssInject()],
@@ -9,15 +9,15 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    target: "esnext",
+    target: 'esnext',
     rollupOptions: {
-      input: resolve(__dirname, "src/App.jsx"),
-      preserveEntrySignatures: "exports-only",
-      external: ["solid-js"],
+      input: resolve(__dirname, 'src/mf.js'),
+      preserveEntrySignatures: 'exports-only',
+      external: ['solid-js'],
       output: {
-        entryFileNames: "bundle.js",
-        format: "esm",
+        entryFileNames: 'bundle.js',
+        format: 'esm',
       },
     },
   },
-});
+})
