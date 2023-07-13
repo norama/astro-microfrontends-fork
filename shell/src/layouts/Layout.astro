@@ -20,7 +20,7 @@ const { title } = Astro.props;
         "react": "https://esm.sh/react",
         "react-dom": "https://esm.sh/react-dom",
         "solid-js": "https://esm.sh/solid-js",
-        "solid-microfrontends": "http://localhost:7300/bundle.js"
+        "solid-microfrontends": import.meta.env.PUBLIC_SOLID_MF_URL
       }
     }
     </script>
