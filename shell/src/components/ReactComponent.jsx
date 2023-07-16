@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import MicroFrontendA from 'http://localhost:7100/bundle.js'
-import MicroFrontendB from 'http://localhost:7200/bundle.js'
+import MicroFrontend1 from 'react-microfrontend1'
+import MicroFrontend2 from 'react-microfrontend2'
 
-// this does not work in devmode due to different react versions
+// this does not work in dev mode due to different react versions
 const ReactComponent = () => (
   <>
-    <MicroFrontendA />
-    <MicroFrontendB />
+    <MicroFrontend1 />
+    <MicroFrontend2 />
   </>
 )
 

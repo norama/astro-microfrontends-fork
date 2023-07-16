@@ -1,0 +1,32 @@
+{
+  "name": "astro-microfrontends-fork",
+  "version": "1.0.0",
+  "description": "Astro with client rendered microfrontends ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:astro\" \"npm run dev:mf\"",
+    "dev:astro": "npm run dev --prefix shell",
+    "dev:mf": "concurrently \"npm run dev --prefix mf-react-1\" \"npm run dev --prefix mf-react-2\" \"npm run dev --prefix mf-solid\"",
+    "build": "npm run build:astro && npm run build:mf",
+    "build:astro": "npm run build --prefix shell",
+    "build:mf": "npm run build --prefix mf-react-1 && npm run build --prefix mf-react-2 && npm run build --prefix mf-solid",
+    "serve:mf": "concurrently \"npm run serve --prefix mf-react-1\" \"npm run serve --prefix mf-react-2\" \"npm run serve --prefix mf-solid\"",
+    "preview:astro": "npm run preview --prefix shell",
+    "preview": "concurrently \"npm run serve:mf\" \"npm run preview:astro\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/norama/astro-microfrontends-fork.git"
+  },
+  "author": "Nora Mate, Sergio A. Arevalo Soria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/norama/astro-microfrontends-fork/issues"
+  },
+  "homepage": "https://github.com/norama/astro-microfrontends-fork#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "prettier": "^3.0.0"
+  }
+}

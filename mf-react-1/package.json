@@ -1,11 +1,12 @@
 {
-  "name": "app-b",
+  "name": "app-a",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 7002",
+    "dev": "vite --port 7001",
     "build": "vite build",
-    "preview": "vite preview --port 7002",
+    "serve": "npm start --prefix server",
+    "preview": "vite preview --port 7001",
     "test": "vitest"
   },
   "dependencies": {
@@ -17,8 +18,5 @@
     "vite": "3.2.3",
     "vite-plugin-css-injected-by-js": "1.4.0",
     "prettier": "^3.0.0"
-  },
-  "prettier": {
-    "printWidth": 120
   }
 }

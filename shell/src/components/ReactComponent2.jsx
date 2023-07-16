@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react'
-import { injectMikrofrontendA } from 'http://localhost:7100/bundle.js'
-import { injectMikrofrontendB } from 'http://localhost:7200/bundle.js'
+import { injectMicroFrontend1 } from 'react-microfrontend1'
+import { injectMicroFrontend2 } from 'react-microfrontend2'
 
-const mountpointA = 'mikrofrontend-a'
-const mountpointB = 'mikrofrontend-b'
+const mountpoint1 = 'mf1'
+const mountpoint2 = 'mf2'
 
 // this works in dev mode
 const ReactComponent2 = () => {
   useEffect(() => {
-    injectMikrofrontendA(mountpointA)
-    injectMikrofrontendB(mountpointB)
+    injectMicroFrontend1(mountpoint1)
+    injectMicroFrontend2(mountpoint2)
   }, [])
 
   return (
     <>
-      <div id={mountpointA} />
-      <div id={mountpointB} />
+      <div id={mountpoint1} />
+      <div id={mountpoint2} />
     </>
   )
 }

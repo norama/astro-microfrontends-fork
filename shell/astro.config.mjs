@@ -10,13 +10,17 @@ const MF_DEV = true
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const mfPath = MF_DEV ? '../app-c/src/mf.js' : '../app-c/dist/bundle.js'
+const mfPathSolid = MF_DEV ? '../mf-solid/src/mf.js' : '../mf-solid/dist/bundle.js'
+const mfPathReact1 = MF_DEV ? '../mf-react-1/src/mf.js' : '../mf-react-1/dist/bundle.js'
+const mfPathReact2 = MF_DEV ? '../mf-react-2/src/mf.js' : '../mf-react-2/dist/bundle.js'
 
 export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        'solid-microfrontends': path.resolve(__dirname, mfPath),
+        'solid-microfrontends': path.resolve(__dirname, mfPathSolid),
+        'react-microfrontend1': path.resolve(__dirname, mfPathReact1),
+        'react-microfrontend2': path.resolve(__dirname, mfPathReact2),
       },
     },
   },
@@ -33,6 +37,8 @@ export default defineConfig({
               'react-dom',
               'solid-js',
               'solid-microfrontends',
+              'react-microfrontend1',
+              'react-microfrontend2',
             ]
           }
         },

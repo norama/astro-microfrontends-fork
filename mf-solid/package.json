@@ -6,7 +6,8 @@
     "start": "vite --port 7003",
     "dev": "vite --port 7003",
     "build": "vite build",
-    "serve": "vite preview --port 7003"
+    "serve": "npm start --prefix server",
+    "preview": "vite preview --port 7003"
   },
   "license": "MIT",
   "devDependencies": {
