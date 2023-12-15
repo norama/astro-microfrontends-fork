@@ -7,7 +7,7 @@ const App = () => {
   return (
     <section className="app-b">
       <h1 onClick={() => setCount((c) => c + 1)} style={{ cursor: 'pointer' }}>
-        ReactApp B Count: {count}
+        ReactApp B Count fff xxx: {count}
       </h1>
     </section>
   )

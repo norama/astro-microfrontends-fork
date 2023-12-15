@@ -11,7 +11,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     rollupOptions: {
-      input: resolve(__dirname, 'src/mf.js'),
+      input: resolve(__dirname, 'src/index.js'),
       preserveEntrySignatures: 'exports-only',
       external: ['solid-js'],
       output: {

@@ -2,6 +2,12 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "jsxImportSource": "solid-js",
+    "baseUrl": ".",
+    "paths": {
+      "solid-microfrontends/*": ["../mf-solid/src/*"],
+      "react-microfrontend1/*": ["../mf-react-1/src/*"],
+      "react-microfrontend2/*": ["../mf-react-2/src/*"]
+    }
   }
 }
