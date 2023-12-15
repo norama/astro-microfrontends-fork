@@ -14,17 +14,32 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {import.meta.env.DEV ? 
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "react-dom": "https://esm.sh/react-dom",
+          "solid-js": "https://esm.sh/solid-js",
+          "solid-microfrontends": "http://localhost:7300/bundle.js",
+          "react-microfrontend1": "http://localhost:7100/bundle.js",
+          "react-microfrontend2": "http://localhost:7200/bundle.js"
+        }
+      }
+    </script> 
+    : 
     <script type="importmap">
     {
       "imports": {
         "react": "https://esm.sh/react",
         "react-dom": "https://esm.sh/react-dom",
         "solid-js": "https://esm.sh/solid-js",
-        "solid-microfrontends": import.meta.env.PUBLIC_SOLID_MF_URL,
-        "react-microfrontend1": import.meta.env.PUBLIC_REACT_MF1_URL,
-        "react-microfrontend2": import.meta.env.PUBLIC_REACT_MF2_URL
+        "solid-microfrontends": "http://localhost:7300/bundle.js",
+        "react-microfrontend1": "http://localhost:7100/bundle.js",
+        "react-microfrontend2": "http://localhost:7200/bundle.js"
       }
     }
+    </script>}
     </script>
   </head>
   <body>

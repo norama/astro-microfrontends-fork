@@ -5,7 +5,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 // loads solid microfrontends from source if true
-const MF_DEV = true
+const MF_DEV = false
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
